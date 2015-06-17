@@ -1,0 +1,4 @@
+[2015-06-07 22:19:59] debug.DEBUG: test logger [] {"file":"/var/www/pulpy/src/libs/loggers/Logger.php","line":33,"class":"Pulpy\\Lib\\Logger","function":"write"}
+[2015-06-07 22:23:00] debug.DEBUG: test logger [] {"file":"/var/www/pulpy/src/libs/loggers/Logger.php","line":33,"class":"Pulpy\\Lib\\Logger","function":"write"}
+[2015-06-08 21:44:49] debug.DEBUG: test logger [] {"file":"/var/www/pulpy/src/libs/loggers/Logger.php","line":33,"class":"Pulpy\\Lib\\Logger","function":"write"}
+[2015-06-10 22:13:50] debug.DEBUG: test logger [] {"file":"/var/www/pulpy/src/libs/loggers/Logger.php","line":33,"class":"Pulpy\\Lib\\Logger","function":"write"}
