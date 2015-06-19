@@ -430,69 +430,6 @@
         ]
     },
     {
-        "name": "symfony/translation",
-        "version": "v2.7.0",
-        "version_normalized": "2.7.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/Translation.git",
-            "reference": "cc1907bbeacfcc703c031b67545400d6e7d1eb79"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/Translation/zipball/cc1907bbeacfcc703c031b67545400d6e7d1eb79",
-            "reference": "cc1907bbeacfcc703c031b67545400d6e7d1eb79",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.9"
-        },
-        "conflict": {
-            "symfony/config": "<2.7"
-        },
-        "require-dev": {
-            "psr/log": "~1.0",
-            "symfony/config": "~2.7",
-            "symfony/intl": "~2.3",
-            "symfony/phpunit-bridge": "~2.7",
-            "symfony/yaml": "~2.2"
-        },
-        "suggest": {
-            "psr/log": "To use logging capability in translator",
-            "symfony/config": "",
-            "symfony/yaml": ""
-        },
-        "time": "2015-05-29 14:44:44",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.7-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Translation\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Translation Component",
-        "homepage": "https://symfony.com"
-    },
-    {
         "name": "nesbot/carbon",
         "version": "1.19.0",
         "version_normalized": "1.19.0.0",
@@ -713,106 +650,6 @@
         "homepage": "http://laravel.com"
     },
     {
-        "name": "illuminate/support",
-        "version": "v5.1.1",
-        "version_normalized": "5.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/illuminate/support.git",
-            "reference": "6102ad040e125921de1290ed0184b87d3d55c9ac"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/support/zipball/6102ad040e125921de1290ed0184b87d3d55c9ac",
-            "reference": "6102ad040e125921de1290ed0184b87d3d55c9ac",
-            "shasum": ""
-        },
-        "require": {
-            "danielstjules/stringy": "~1.8",
-            "doctrine/inflector": "~1.0",
-            "ext-mbstring": "*",
-            "illuminate/contracts": "5.1.*",
-            "php": ">=5.5.9"
-        },
-        "suggest": {
-            "jeremeamia/superclosure": "Required to be able to serialize closures (~2.0).",
-            "symfony/var-dumper": "Required to use the dd function (2.7.*)."
-        },
-        "time": "2015-06-08 19:12:16",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Illuminate\\Support\\": ""
-            },
-            "files": [
-                "helpers.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Taylor Otwell",
-                "email": "taylorotwell@gmail.com"
-            }
-        ],
-        "description": "The Illuminate Support package.",
-        "homepage": "http://laravel.com"
-    },
-    {
-        "name": "illuminate/container",
-        "version": "v5.1.1",
-        "version_normalized": "5.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/illuminate/container.git",
-            "reference": "1436eeaaf24f6b0eeea77dd3f4d1b376409e5e19"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/illuminate/container/zipball/1436eeaaf24f6b0eeea77dd3f4d1b376409e5e19",
-            "reference": "1436eeaaf24f6b0eeea77dd3f4d1b376409e5e19",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/contracts": "5.1.*",
-            "php": ">=5.5.9"
-        },
-        "time": "2015-06-04 16:52:35",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Illuminate\\Container\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Taylor Otwell",
-                "email": "taylorotwell@gmail.com"
-            }
-        ],
-        "description": "The Illuminate Container package.",
-        "homepage": "http://laravel.com"
-    },
-    {
         "name": "illuminate/database",
         "version": "v5.1.1",
         "version_normalized": "5.1.1.0",
@@ -915,5 +752,168 @@
         "keywords": [
             "orm"
         ]
+    },
+    {
+        "name": "illuminate/container",
+        "version": "v5.1.2",
+        "version_normalized": "5.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/illuminate/container.git",
+            "reference": "248cd26c38d1e29eac74d32d9fff158b2232a3c6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/illuminate/container/zipball/248cd26c38d1e29eac74d32d9fff158b2232a3c6",
+            "reference": "248cd26c38d1e29eac74d32d9fff158b2232a3c6",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/contracts": "5.1.*",
+            "php": ">=5.5.9"
+        },
+        "time": "2015-06-13 00:40:15",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Illuminate\\Container\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Taylor Otwell",
+                "email": "taylorotwell@gmail.com"
+            }
+        ],
+        "description": "The Illuminate Container package.",
+        "homepage": "http://laravel.com"
+    },
+    {
+        "name": "illuminate/support",
+        "version": "v5.1.2",
+        "version_normalized": "5.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/illuminate/support.git",
+            "reference": "cf0604a576bb5bf3b36ed5c3a4b52c5464fd49b4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/illuminate/support/zipball/cf0604a576bb5bf3b36ed5c3a4b52c5464fd49b4",
+            "reference": "cf0604a576bb5bf3b36ed5c3a4b52c5464fd49b4",
+            "shasum": ""
+        },
+        "require": {
+            "danielstjules/stringy": "~1.8",
+            "doctrine/inflector": "~1.0",
+            "ext-mbstring": "*",
+            "illuminate/contracts": "5.1.*",
+            "php": ">=5.5.9"
+        },
+        "suggest": {
+            "jeremeamia/superclosure": "Required to be able to serialize closures (~2.0).",
+            "symfony/var-dumper": "Required to use the dd function (2.7.*)."
+        },
+        "time": "2015-06-15 07:46:41",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Illuminate\\Support\\": ""
+            },
+            "files": [
+                "helpers.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Taylor Otwell",
+                "email": "taylorotwell@gmail.com"
+            }
+        ],
+        "description": "The Illuminate Support package.",
+        "homepage": "http://laravel.com"
+    },
+    {
+        "name": "symfony/translation",
+        "version": "v2.7.1",
+        "version_normalized": "2.7.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/Translation.git",
+            "reference": "8349a2b0d11bd0311df9e8914408080912983a0b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/Translation/zipball/8349a2b0d11bd0311df9e8914408080912983a0b",
+            "reference": "8349a2b0d11bd0311df9e8914408080912983a0b",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "conflict": {
+            "symfony/config": "<2.7"
+        },
+        "require-dev": {
+            "psr/log": "~1.0",
+            "symfony/config": "~2.7",
+            "symfony/intl": "~2.3",
+            "symfony/phpunit-bridge": "~2.7",
+            "symfony/yaml": "~2.2"
+        },
+        "suggest": {
+            "psr/log": "To use logging capability in translator",
+            "symfony/config": "",
+            "symfony/yaml": ""
+        },
+        "time": "2015-06-11 17:26:34",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.7-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Translation\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Translation Component",
+        "homepage": "https://symfony.com"
     }
 ]

@@ -102,7 +102,7 @@ class Collection extends BaseCollection
      * @param  string  $key
      * @return mixed
      */
-    public function max($key)
+    public function max($key = null )
     {
         return $this->reduce(function ($result, $item) use ($key) {
             return is_null($result) || $item->{$key} > $result ? $item->{$key} : $result;
@@ -115,7 +115,7 @@ class Collection extends BaseCollection
      * @param  string  $key
      * @return mixed
      */
-    public function min($key)
+    public function min($key = null )
     {
         return $this->reduce(function ($result, $item) use ($key) {
             return is_null($result) || $item->{$key} < $result ? $item->{$key} : $result;
