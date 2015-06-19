@@ -6,7 +6,7 @@ class HtmlView extends \Slim\View
 {
     public function render( $template, $data = null )
     {
-	return "<h1>test</h1>";
+	return "<h1>Default View</h1>";
     }
 }
 ?>
