@@ -7,6 +7,12 @@
 spl_autoload_register(function ($class) {
     $paths = array( 
 	'/src/',
+	// lib
+	'/src/libs/',
+	'/src/libs/loggers/',
+	'/src/libs/errors/',
+	'/src/libs/dbs/',
+	'/src/libs/auths/',
 	// dbs
 	'/src/dbs/',
 	'/src/dbs/_core/',
@@ -16,13 +22,7 @@ spl_autoload_register(function ($class) {
 	// -by pulpy, nothing to do
 	// templates
 	// -by pulpy, nothing to do
-	// lib
-	'/src/libs/',
-	'/src/libs/loggers/',
-	'/src/libs/errors/',
-	'/src/libs/dbs/',
-	'/src/libs/auths/',
-
+	
     );
 
     foreach( $paths as $path )

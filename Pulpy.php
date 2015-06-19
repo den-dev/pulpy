@@ -1,5 +1,6 @@
 <?php
 namespace Pulpy;
+require_once 'src/libs/errors/errors_define.php';
 require_once 'vendor/autoload.php';
 require_once 'autoload.php';
 
@@ -82,33 +83,37 @@ class Pulpy extends \Slim\Slim
 	if( array_key_exists( $view_type, $this->_views_available ) )
 	{
 	    $view_infos = $this->_views_available[$view_type];
-	}
 
-	// set view
-	$full_view_path = $this->get_arg_config( 'views_path' ) . $view_infos['path'] . $view_infos['file_name'];
-	if( file_exists( $full_view_path ) )
-	{
-	    include_once $full_view_path;
-
-	    // convention: name file_name == class name 
-	    $class_name = "\Pulpy\\View\\" . str_replace( '.php', '', $view_infos['file_name'] );
-	    switch( $view_type )
+	    // set view
+	    $full_view_path = $this->get_arg_config( 'views_path' ) . $view_infos['path'] . $view_infos['file_name'];
+	    if( file_exists( $full_view_path ) )
 	    {
-	    case 'twig':
-		$this->container->set( 'view', new $class_name( $this->get_arg_config( 'templates.path' ), $this->get_arg_config( 'debug' ) ) );
-		break;
-	    case 'json':
-		$this->container->set( 'view', new $class_name() );
-		$this->add( new \JsonApiMiddleware() );
-		break;
-	    default:
-		$this->container->set( 'view', new $class_name() );
+		include_once $full_view_path;
+
+		// convention: name file_name == class name 
+		$class_name = "\Pulpy\\View\\" . str_replace( '.php', '', $view_infos['file_name'] );
+		switch( $view_type )
+		{
+		case 'twig':
+		    $this->container->set( 'view', new $class_name( $this->get_arg_config( 'templates.path' ), $this->get_arg_config( 'debug' ) ) );
+		    break;
+		case 'json':
+		    $this->container->set( 'view', new $class_name() );
+		    $this->add( new \JsonApiMiddleware() );
+		    break;
+		default:
+		    $this->container->set( 'view', new $class_name() );
+		}
+		$ok = true;
 	    }
-	    $ok = true;
+	    else
+	    {
+		$this->log_error( PLP_TEMPLATE_CHANGE_VIEW_ERROR, false );
+	    }
 	}
 	else
 	{
-	    $this->log_error( PLP_USER_ERROR, false );
+	    $this->log_error( PLP_TEMPLATE_CHANGE_VIEW_ERROR, false );
 	}
 
 
@@ -121,17 +126,11 @@ class Pulpy extends \Slim\Slim
 	$logs->write( $log_name, $message, $level );
     }
 
-    public function log_error( $code, $fatal = false )
+    public function log_error( $code, $fatal = false, $debug_infos = false )
     {
 	// write custom exception
-	$error = new \Pulpy\Lib\Error\Error( $code );
-	$this->write_log( 'error', $error, 'error' );
-
-	// fatal or not
-	if( $fatal )
-	{
-	    throw $error;
-	}
+	$error = new \Pulpy\Lib\Error\Error( $code, $fatal, $debug_infos );
+	return $error->to_debug();
     }
 
     public function get_db( $name )
@@ -206,9 +205,13 @@ class Pulpy extends \Slim\Slim
       // path
       $this->container->set( 'root_path', dirname( __FILE__ ) );
       $this->container->set( 'routes_path', dirname( __FILE__ ) . '/src/routes/' );
-      $this->container->set( 'views_path', dirname( __FILE__ ) . '/src/templates/' );
+      $this->container->set( 'views_path', dirname( __FILE__ ) . '/src/templates/_core/views/' );
       $this->container->set( 'templates.path', dirname( __FILE__ ) . '/src/templates/' );
       $this->container->set( 'logs_path', dirname( __FILE__ ) . '/logs/' );
+      // assets
+      $this->container->set( 'css_path', dirname( __FILE__ ) . '/src/assets/css/stylesheets/' );
+      $this->container->set( 'js_path', dirname( __FILE__ ) . '/src/assets/js/' );
+      $this->container->set( 'img_path', dirname( __FILE__ ) . '/src/assets/img/' );
       // url
       $this->container->set( 'root_url',  "http://$_SERVER[HTTP_HOST]" . '/pulpy/pulpy' );
       $this->container->set( 'private_web_url',  $this->get_arg_config( 'root_url' ) . '/private/web/' );
@@ -249,27 +252,28 @@ class Pulpy extends \Slim\Slim
       $this->_views_available = array(
 	'default' => array( 
 	  'file_name' => 'TestView.php', 
-	  'path' => $path_base . '_core/'
+	  'path' => $path_base 
 	),
 	'html' => array( 
 	  'file_name' => 'HtmlView.php',
-	  'path' => $path_base . '_core/'
+	  'path' => $path_base 
 	),
 	'smarty' => array( 
 	  'file_name' => 'SmartyView.php',
-	  'path' => $path_base . '_core/'
+	  'path' => $path_base
 	),
 	'twig' => array( 
 	  'file_name' => 'TwigView.php',
-	  'path' => $path_base . '_core/'
+	  'path' => $path_base
 	),
 	'json' => array( 
 	  'file_name' => 'JsonView.php',
-	  'path' => $path_base . '_core/'
+	  'path' => $path_base
 	),
 
       );
       // set default view
+
       $this->change_view( 'default' );
 
 

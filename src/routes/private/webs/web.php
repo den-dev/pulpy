@@ -19,7 +19,8 @@ $app->group('/web', function () use ($app) {
    });
 
    $app->get( '/login', function() use ( $app ) {
-      echo " login" ;
+      $app->change_view( 'twig' );
+      $app->render( 'private/login.php', array() );
    });
 
    $app->get( '/logout', function() use ( $app ) {

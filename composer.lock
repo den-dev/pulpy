@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "347b3d9c49d6475f97c4e2c9a006ae1b",
+    "hash": "f9a5c35b1a50903a6165898f534b3e72",
     "packages": [
         {
             "name": "cartalyst/sentry",
@@ -318,16 +318,16 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.1.1",
+            "version": "v5.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "1436eeaaf24f6b0eeea77dd3f4d1b376409e5e19"
+                "reference": "248cd26c38d1e29eac74d32d9fff158b2232a3c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/1436eeaaf24f6b0eeea77dd3f4d1b376409e5e19",
-                "reference": "1436eeaaf24f6b0eeea77dd3f4d1b376409e5e19",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/248cd26c38d1e29eac74d32d9fff158b2232a3c6",
+                "reference": "248cd26c38d1e29eac74d32d9fff158b2232a3c6",
                 "shasum": ""
             },
             "require": {
@@ -357,7 +357,7 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "http://laravel.com",
-            "time": "2015-06-04 16:52:35"
+            "time": "2015-06-13 00:40:15"
         },
         {
             "name": "illuminate/contracts",
@@ -462,16 +462,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.1.1",
+            "version": "v5.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "6102ad040e125921de1290ed0184b87d3d55c9ac"
+                "reference": "cf0604a576bb5bf3b36ed5c3a4b52c5464fd49b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/6102ad040e125921de1290ed0184b87d3d55c9ac",
-                "reference": "6102ad040e125921de1290ed0184b87d3d55c9ac",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/cf0604a576bb5bf3b36ed5c3a4b52c5464fd49b4",
+                "reference": "cf0604a576bb5bf3b36ed5c3a4b52c5464fd49b4",
                 "shasum": ""
             },
             "require": {
@@ -511,7 +511,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "http://laravel.com",
-            "time": "2015-06-08 19:12:16"
+            "time": "2015-06-15 07:46:41"
         },
         {
             "name": "monolog/monolog",
@@ -775,16 +775,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v2.7.0",
+            "version": "v2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Translation.git",
-                "reference": "cc1907bbeacfcc703c031b67545400d6e7d1eb79"
+                "reference": "8349a2b0d11bd0311df9e8914408080912983a0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Translation/zipball/cc1907bbeacfcc703c031b67545400d6e7d1eb79",
-                "reference": "cc1907bbeacfcc703c031b67545400d6e7d1eb79",
+                "url": "https://api.github.com/repos/symfony/Translation/zipball/8349a2b0d11bd0311df9e8914408080912983a0b",
+                "reference": "8349a2b0d11bd0311df9e8914408080912983a0b",
                 "shasum": ""
             },
             "require": {
@@ -832,7 +832,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-29 14:44:44"
+            "time": "2015-06-11 17:26:34"
         },
         {
             "name": "twig/twig",
