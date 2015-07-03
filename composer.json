@@ -8,6 +8,7 @@
         "monolog/monolog": "1.13.*@dev",
         "cartalyst/sentry": "2.1.*",
         "illuminate/database": "5.1.1",
-        "gabordemooij/redbean": "dev-master"
+        "gabordemooij/redbean": "dev-master",
+        "phpunit/phpunit": "dev-master"
     }
 }
