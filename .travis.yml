@@ -16,9 +16,11 @@ php:
 env:
   - VERSION = 0.1
 
-#before_install
+before_install:
+    - composer self-update
 
-#install
+install:
+    - composer update
 
 before_script:
     - mysql -e 'create database pulpy_test;'
